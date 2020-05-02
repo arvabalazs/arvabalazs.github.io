@@ -41,24 +41,33 @@
 		line-height: 100%;
 		vertical-align: middle;
 	}
+	
 	.cloud li:nth-of-type(3n + 1) {
 		vertical-align: top;
 	}
 	
 	.cloud li:nth-of-type(4n + 3) {
-		vertical-align: bottom;
+		vertical-align: middle;
 	}
 	
 	.cloud li:nth-of-type(5n - 3) {
     	vertical-align: bottom;
 	}
+
+	.cloud li:nth-of-type(1) {
+		vertical-align: bottom;
+	}
 	</style>
 </head>
 <body class="w3-content">
 	<header class="w3-container w3-sand w3-center w3-padding-16">
-		<img src="profile_64.jpg" alt="Profile picture" class="w3-circle w3-margin-right" width="64px" height="64px" />
+		<img src="profile.jpg" alt="Profile picture" class="w3-border w3-circle w3-margin-right" width="64px" height="64px" />
 		<h1 style="display:inline; vertical-align:middle;">Árva Balázs</h1>
-		<div class="w3-center w3-text-bold w3-margin-top">Software Development Expert | Passionate Team Leader | Extravagant Technologist</div>
+		<div class="w3-center w3-text-bold w3-margin-top">
+			&#8226; Software Development Expert <span class="w3-hide-large">&#8226;<br></span>
+			&#8226; Passionate Team Leader <span class="w3-hide-large">&#8226;<br></span>
+			&#8226; Extravagant Technologist &#8226;
+		</div>
 	</header>
 	<main class="w3-container">
 	<section class="w3-section w3-center">
@@ -72,12 +81,13 @@
 			<li class="w3-large">Generalist</li>
 			<li class="w3-text-green w3-xlarge">Coach</li>
 			<li class="w3-xlarge">Senior</li>
+			<li class="w3-text-indigo">Java</li>
 			<li class="">Bugtracker</li>
-			<li class="">Docker</li>
+			<li class="w3-text-deep-orange w3-large">Software Development</li>
 			<li class="w3-text-green">Face to face</li>
 			<li class="">Debugging</li>
 			<li class="w3-text-green w3-large">Interview preparation</li>
-			<li class="w3-text-deep-orange w3-large">Software Development</li>
+			<li class="">Docker</li>
 			<li class="w3-text-green">Leadership</li>
 			<li class="w3-text-indigo">SQL</li>
 			<li class="w3-text-green">Management</li>
@@ -88,16 +98,15 @@
 			<li class="w3-xlarge">Software Design</li>
 			<li class="w3-text-deep-orange w3-large">Test Driven Development</li>
 			<li class="w3-text-green">Teaching</li>
+			<li class="w3-large">STL</li>
 			<li class="">Object Oriented Design</li>
 			<li class="w3-text-indigo w3-xlarge">C++</li>
 			<li class="">Subversion</li>
-			<li class="w3-text-indigo">Java</li>
 			<li class="">Git</li>
-			<li class="w3-text-indigo">JavaScript</li>
+			<li class="w3-text-indigo w3-xlarge">JavaScript</li>
 			<li class="w3-text-green">Online</li>
 			<li class="">MongoDB</li>
-			<li class=" w3-large">STL</li>
-			<li class="">Boost</li>
+			<li class="w3-large">Boost</li>
 			<li class="w3-text-green">Personal</li>
 			<li class="w3-text-deep-orange">Multithreading</li>
 		</ul>
@@ -119,13 +128,13 @@
 		</ul>
 	</section>
 	</main>
-	<footer class="w3-container w3-row w3-sand">
-		<address class="w3-half">
-			<p><i class="material-icons w3-left w3-margin-right">my_location</i>Budapest, Hungary
-			<p><i class="material-icons w3-left w3-margin-right">email</i><a href="mailto:arvabalazs@gmail.com">arvabalazs@gmail.com</a>
-			<p><i class="material-icons w3-left w3-margin-right">person_pin</i><a href="https://www.linkedin.com/in/arvabalazs">LinkedIn</a>
+	<footer>
+		<address class="w3-row w3-center w3-sand w3-padding-16">
+			<i class="material-icons w3-cell-middle">my_location</i><span class="w3-cell-middle">Budapest, Hungary</span>
+			<i class="material-icons w3-cell-middle w3-margin-left">email</i><a class="w3-cell-middle w3-margin-right" href="mailto:arvabalazs@gmail.com">arvabalazs@gmail.com</a>
+			<i class="material-icons w3-cell-middle">person_pin</i><a class="w3-cell-middle" href="https://www.linkedin.com/in/arvabalazs">LinkedIn</a>
 		</address>
-		<div class="w3-half w3-padding"><i class="material-icons w3-xxlarge">format_quote</i>The \(S\subseteq A\times A^{\ast\ast}\) relation is a program, if<br>
+		<div class="w3-padding w3-black"><i class="material-icons w3-xxlarge">format_quote</i>The \(S\subseteq A\times A^{\ast\ast}\) relation is a program, if<br>
 			1) \(\mathcal{D}_f=A\) and<br>
 			2) \(\forall\alpha\in\mathcal{R}_S:\alpha=red(\alpha)\) and<br>
 			3) \(\forall a\in A:\forall\alpha\in S(a):\alpha_1=a\).
