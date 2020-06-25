@@ -15,21 +15,56 @@
 	<meta name="author" content="Balázs Árva">
 	<title>Balázs Árva | Software Development | Teaching | Consulting</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+
 	<link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-	
+
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/w3--css@1.0.0/w3.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons&text=my_locationemailprsfqugd&display=swap" media="print" onload="this.media='all'">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" media="print" onload="this.media='all'">
 	<script async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-	
+
 	<script async id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 	<style>
+		:root {
+			--midnight-blue: #1E1F26;
+			--indigo-ink: #283655;
+			--blueberry: #4D648D;
+			--periwinkle: #D0E1F9;
+		}
+
 		body {
-			background-color: white;
-			color: #222222;
+			/* color:white; */
+			background-color: var(--midnight-blue);
+		}
+
+		section,
+		footer {
+			background-color: var(--periwinkle);
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+
+		 /* {
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		} */
+
+		h1 {
+			background-color: var(--indigo-ink);
+			font-weight: bold;
+			color: white;
+			text-align: center;
+		}
+
+		h2 {
+			background-color: var(--blueberry);
+			font-weight: bold;
+			color: white;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+
+		h3 {
+			font-weight: bold;
 		}
 
 		li {
@@ -66,71 +101,31 @@
 		.cloud li:last-child {
 			vertical-align: top;
 		}
-
-		h1 {
-			font-weight: bold;
-		}
-
-		.blue-blossom {
-			background-color: #2DA8D8FF;
-		}
-
-		.text-blue-blossom {
-			color: #2DA8D8FF;
-		}
-
-		.danger-red {
-			background-color: #D9514EFF;
-		}
-
-		.text-danger-red {
-			color: #D9514EFF;
-		}
-
-		.tap-shoe {
-			background-color: #2A2B2DFF;
-		}
-
-		.text-tap-shoe {
-			color: #2A2B2DFF;
-		}
-
-		.border-tap-shoe {
-			border-color: #2A2B2DFF !important;
-		}
-
-		:root {
-			--midnight-blue: #1E1F26;
-			--indigo-ink: #283655;
-			--periwinkle: #D0E1F9;
-		}
-
-		.midnight-blue {
-			background-color: #1E1F26;
-		}
 	</style>
 	<!-- <meta property="og:image" content="http://ia.media-imdb.com/images/rock.jpg" /> -->
 	<!-- <meta property="fb:admins" content="USER_ID"/> -->
 </head>
 
-<body class="w3-content" style="background-color: var(--midnight-blue);">
-	<header class="w3-center w3-padding-32" style="background-image: url('football2.jpg'); background-position: center center;">
-		<img alt="Profile picture" class="w3-circle" style="border: 5px solid white;" width="256px" height="256px" src="profile.jpg" />
-		<div class="" style="background-color: var(--periwinkle)">
-			<h1 class="">ÁRVA BALÁZS</h1>
-			<div class="w3-center text-blue-blossom w3-padding" style="font-weight:bold">
-				&#8226; Software Development Expert <span class="w3-hide-large">&#8226;<br></span>
-				&#8226; Passionate Team Leader <span class="w3-hide-large">&#8226;<br></span>
-				&#8226; Extravagant Technologist &#8226;
-			</div>
-		</div>
-	</header>
-	<main>
+<body class="w3-content">
+	<header class="w3-container w3-center" >
 		<section class="w3-section">
-			<h1 class="tap-shoe w3-text-white w3-padding" style="margin-top:0; margin-bottom:0">#TANÁCSADÁS</h1>
+			<img alt="Profile picture" class="w3-circle" style="border: 5px solid white;" width="256px" height="256px" src="profile.jpg" />
+			<div class="" style="background-color: var(--periwinkle)">
+				<h1 class="">ÁRVA BALÁZS</h1>
+				<div class="w3-center w3-padding" style="font-weight:bold">
+					&#8226; Software Development Expert <span class="w3-hide-large">&#8226;<br></span>
+					&#8226; Passionate Team Leader <span class="w3-hide-large">&#8226;<br></span>
+					&#8226; Extravagant Technologist &#8226;
+				</div>
+			</div>
+		</section>
+	</header>
+	<main class="w3-container">
+		<section class="w3-section">
+			<h1 class="w3-padding" style="margin-bottom:0">#TANÁCSADÁS</h1>
 			<div class="w3-row">
 				<div class="w3-half w3-panel">
-					<h2 class="blue-blossom w3-padding">Pályatanácsadás és információnyújtás</h2>
+					<h2 class="w3-padding">Pályatanácsadás és információnyújtás</h2>
 					<h3>Kinek ajánlom? NEKED</h3>
 					<ul class="" style="font-size: 120%">
 						<li>ha érdekel a szoftverfejlesztés világa, de nem tudod, hogyan vágj bele,</li>
@@ -151,7 +146,7 @@
 				</div>
 
 				<div class="w3-half w3-panel">
-					<h2 class="blue-blossom w3-padding">Karriertanácsadás</h2>
+					<h2 class="w3-padding">Karriertanácsadás</h2>
 					<h3>Kinek ajánlom? NEKED</h3>
 					<ul class="" style="font-size: 120%">
 						<li>ha már egy ideje a szoftverfejlesztés világában tevékenykedsz, de nem látod, hogyan és hová tudnál előrelépni</li>
@@ -167,12 +162,12 @@
 						<li>Az önállósodás lehetőségeiről</li>
 						<li>Cégválasztásról</li>
 					</ol>
-					<h3 class="w3-wide danger-red w3-center">ÁR: érdeklődj, kérj árajánlatot [milyen információt kell, hogy tartalmazzon az árajánlat-kérés?]</h3>
+					<h3 class="w3-wide w3-center">ÁR: érdeklődj, kérj árajánlatot [milyen információt kell, hogy tartalmazzon az árajánlat-kérés?]</h3>
 				</div>
 			</div>
 		</section>
 		<section class="w3-section">
-			<h1 class="tap-shoe w3-text-white w3-padding" style="margin-top:0; margin-bottom:0">#MENTORÁLÁS</h1>
+			<h1 class="w3-padding" style="margin-top:0; margin-bottom:0">#MENTORÁLÁS</h1>
 			<div class="w3-row">
 				<div class="w3-half w3-panel">
 					<h2 class="blue-blossom w3-padding">Mire jó a mentoring?</h2>
@@ -253,7 +248,7 @@
 		</section>
 	</main>
 	<footer>
-		<address class="w3-center w3-sand w3-padding-16">
+		<address class="w3-center w3-padding-16">
 			<span class="w3-cell-middle">&#8226; </span><i class="material-icons w3-cell-middle w3-hide-medium">my_location</i> <a class="w3-cell-middle" href="https://goo.gl/maps/CMG4dSjUjnswaSaz9">Inner City, Budapest, Hungary</a><span class="w3-hide-medium w3-hide-large w3-cell-middle"> &#8226;<br><br></span>
 			<span class="w3-cell-middle">&#8226; </span><i class="material-icons w3-cell-middle w3-hide-medium">email</i> <a class="w3-cell-middle" href="mailto:arvabalazs@gmail.com">arvabalazs@gmail.com</a><span class="w3-hide-medium w3-hide-large w3-cell-middle"> &#8226;<br><br></span>
 			<span class="w3-cell-middle">&#8226; </span><i class="material-icons w3-cell-middle w3-hide-medium">assignment_ind</i> <a class="w3-cell-middle" href="https://drive.google.com/file/d/14n-fTPuU_uw5QU_Ie5Uc-qADI9UHq7Ss/view?usp=sharing">CV</a><span class="w3-hide-medium w3-hide-large w3-cell-middle"> &#8226;<br><br></span>
