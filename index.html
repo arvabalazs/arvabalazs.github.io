@@ -37,27 +37,29 @@
 		body {
 			/* color:white; */
 			background-color: var(--midnight-blue);
+			background: linear-gradient(90deg, rgba(30,31,38,1) 0%, rgba(208,225,249,1) 52%, rgba(40,54,85,1) 100%);
+			background: linear-gradient(90deg, rgba(40,54,85,1) 0%, rgba(208,225,249,1) 50%, rgba(40,54,85,1) 100%);
 		}
 
 		section,
 		footer {
-			background-color: var(--periwinkle);
+			background-color: white;
 			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 		}
 
-		 /* {
+		/* {
 			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 		} */
 
 		h1 {
-			background-color: var(--indigo-ink);
+			background-color: var(--midnight-blue);
 			font-weight: bold;
 			color: white;
 			text-align: center;
 		}
 
 		h2 {
-			background-color: var(--blueberry);
+			background-color: var(--indigo-ink);
 			font-weight: bold;
 			color: white;
 			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -107,12 +109,12 @@
 </head>
 
 <body class="w3-content">
-	<header class="w3-container w3-center" >
+	<header class="w3-container w3-center">
 		<section class="w3-section">
 			<img alt="Profile picture" class="w3-circle" style="border: 5px solid white;" width="256px" height="256px" src="profile.jpg" />
 			<div class="" style="background-color: var(--periwinkle)">
 				<h1 class="">ÁRVA BALÁZS</h1>
-				<div class="w3-center w3-padding" style="font-weight:bold">
+				<div class="w3-center w3-padding" style="font-weight:bold; background-color: var(--blueberry)">
 					&#8226; Software Development Expert <span class="w3-hide-large">&#8226;<br></span>
 					&#8226; Passionate Team Leader <span class="w3-hide-large">&#8226;<br></span>
 					&#8226; Extravagant Technologist &#8226;
@@ -125,7 +127,8 @@
 			<h1 class="w3-padding" style="margin-bottom:0">#TANÁCSADÁS</h1>
 			<div class="w3-row">
 				<div class="w3-half w3-panel">
-					<h2 class="w3-padding">Pályatanácsadás és információnyújtás</h2>
+					<h2 class="w3-padding" style="margin-bottom:0">Pályatanácsadás és információnyújtás</h2>
+					<h2 class="w3-padding" style="margin-top:0;background-color: var(--periwinkle); color: black;">Pályakezdőknek 1 alkalom ingyenes</h2>
 					<h3>Kinek ajánlom? NEKED</h3>
 					<ul class="" style="font-size: 120%">
 						<li>ha érdekel a szoftverfejlesztés világa, de nem tudod, hogyan vágj bele,</li>
@@ -142,7 +145,7 @@
 						<li>Munkahelytípusokról, munkakultúráról és karrierlehetőségekről</li>
 						<li>Állásinterjúkról </li>
 					</ol>
-					<h3 class="w3-wide danger-red w3-center">Érdeklődőknek és pályakezdőknek 1 alkalom ingyenes.</h3>
+					<h2 class="w3-wide danger-red w3-center"></h2>
 				</div>
 
 				<div class="w3-half w3-panel">
@@ -162,7 +165,6 @@
 						<li>Az önállósodás lehetőségeiről</li>
 						<li>Cégválasztásról</li>
 					</ol>
-					<h3 class="w3-wide w3-center">ÁR: érdeklődj, kérj árajánlatot [milyen információt kell, hogy tartalmazzon az árajánlat-kérés?]</h3>
 				</div>
 			</div>
 		</section>
@@ -185,9 +187,6 @@
 						<li>Hogyan lehetek jó vagy jobb a jelenlegi pozíciómban?</li>
 					</ul>
 				</div>
-			</div>
-			<div class="w3-row">
-				<h3 class="w3-wide danger-red w3-center">ÁR: érdeklődj, kérj árajánlatot [milyen információt kell, hogy tartalmazzon az árajánlat-kérés?]</h3>
 			</div>
 		</section>
 		<!-- <section class="w3-section">
