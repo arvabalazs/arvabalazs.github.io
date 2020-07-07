@@ -25,15 +25,19 @@
 	<script async src=https://polyfill.io/v3/polyfill.min.js?features=es6></script>
 
 	<script async id=MathJax-script src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js></script>
-	
+
 	<link rel=icon type=image/png href=favicon.png>
-	
+
 	<style>
 		:root {
 			--midnight-blue: #1E1F26;
 			--indigo-ink: #283655;
 			--blueberry: #4D648D;
 			--periwinkle: #D0E1F9;
+		}
+
+		.text-midnight-blue {
+			color: var(--midnight-blue);
 		}
 
 		body {
@@ -49,15 +53,13 @@
 			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 		}
 
-		/* {
-			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-		} */
-
 		h1 {
 			background-color: var(--midnight-blue);
 			font-weight: bold;
 			color: white;
 			text-align: center;
+			text-transform: uppercase;
+			margin-bottom:0;
 		}
 
 		h2 {
@@ -110,107 +112,112 @@
 	<!-- <meta property="fb:admins" content="USER_ID"/> -->
 </head>
 
-<body class="w3-content">
-	<header class="w3-container w3-center">
+<body class="w3-content w3-container">
+	<header class="w3-center">
 		<section class="w3-section">
-			<img width=256px height=256px alt="Profile picture" class="w3-circle" style="border: 5px solid white;" src="profile.jpg" />
-			<div class="" style="background-color: var(--periwinkle)">
-				<h1 class="">ÁRVA BALÁZS</h1>
-				<div class="w3-center w3-padding" style="font-weight:bold; background-color: var(--blueberry)">
-					&#8226; Software Development Expert <span class="w3-hide-large">&#8226;<br></span>
-					&#8226; Passionate Team Leader <span class="w3-hide-large">&#8226;<br></span>
-					&#8226; Extravagant Technologist &#8226;
+			<h1 class="w3-padding">Introduction</h1>
+			<div class="w3-row">
+				<div class="w3-half w3-panel">
+					<img width="256px" height="256px" alt="Profile picture" class="w3-circle" style="border: 5px solid white;" src="profile.jpg" />
+					<div class="" style="background-color: var(--periwinkle)">
+						<div class="w3-center w3-padding" style="font-weight:bold; color:white; background-color: var(--blueberry)">
+							&#8226; Software Development Expert &#8226;<br>
+							&#8226; Passionate Team Leader &#8226;<br>
+							&#8226; Extravagant Technologist &#8226;<br>
+							&#8226; Insightful Instructor &#8226;
+						</div>
+					</div>
+				</div>
+				<div class="w3-half w3-panel">
+					<h2>Üdvözöllek!</h2>
+					<p>Árva Balázs vagyok, developer, team leader, leadership skills trainer, technofil és mentor.</p>
+					<p>Szoftverfejlesztés iránt érdeklődőknek, pályakezdőknek, junior és senior fejlesztőknek kínálok egyénre szabott tanácsadást, mentorálást és oktatást.</p>
+					<p>Cégeknek egyedi igényeik alapján nyújtok tanácsadást fejlesztési stratégia kidolgozása és people managment terén, valamint cégprofil-alapú piaci lehetőségek feltérképezésében.</p>
 				</div>
 			</div>
 		</section>
 	</header>
-	<main class="w3-container">
+	<main>
 		<section class="w3-section">
-			<h1 class="w3-padding" style="margin-bottom:0">#TANÁCSADÁS</h1>
+			<h1 class="w3-padding">hands-on counselling</h1>
 			<div class="w3-row">
 				<div class="w3-half w3-panel">
-					<h2 class="w3-padding" style="margin-bottom:0">Pályatanácsadás és információnyújtás</h2>
+					<h2 class="w3-padding" style="margin-bottom:0">Guidance</h2>
 					<h2 class="w3-padding" style="margin-top:0;background-color: var(--periwinkle); color: black;">Pályakezdőknek 1 alkalom ingyenes</h2>
 					<h3>Kinek ajánlom? NEKED</h3>
 					<ul class="" style="font-size: 120%">
-						<li>ha érdekel a szoftverfejlesztés világa, de nem tudod, hogyan vágj bele,</li>
-						<li>ha már gondoltál rá, hogy kipróbálod magad ezen a területen, de útbaigazításra van szükséged,</li>
-						<li>ha tisztább képet szeretnél kapni a szoftverfejlesztés világáról (programozási nyelvek és technológiák, azok használata és jelentősége) </li>
-						<li>ha már tudod, mit szeretnél csinálni, de nem tudod, melyik iparágat válaszd</li>
-						<li>ha tudod, hogy mit szeretnél tanulni, de nem tudod, hol és hogyan </li>
-						<li>ha jelentkeznél egy pozícióra, de segítség kell az állásinterjúhoz</li>
+						<li>ha érdekel a szoftverfejlesztés világa, de nem tudod, hogyan vágj bele</li>
+						<li>ha már gondoltál rá, hogy kipróbálod magad ezen a területen, de útbaigazításra van szükséged</li>
+						<li>ha tisztább képet szeretnél kapni a szoftverfejlesztés világáról (programozási nyelvek és technológiák, azok használata és jelentősége)</li>
+						<li>ha már tudod, mit szeretnél csinálni, de nem tudod, melyik a neked való iparág</li>
+						<li>ha tudod, hogy mit szeretnél tanulni, de nem tudod, hol és hogyan</li>
+						<li>ha jelentkeznél egy pozícióra, de segítség kell a felkészüléshez</li>
 					</ul>
 					<h3>Miről beszélünk a pályatanácsadás során?</h3>
-					<ol class="w3-ul " style="font-size: 120%">
+					<ol class="" style="font-size: 120%">
 						<li>A szoftverfejlesztés világáról</li>
-						<li>Pályairányokról és iparágakról </li>
+						<li>Pályairányokról és iparágakról, azok előnyeiről és hátrányairól</li>
 						<li>Munkahelytípusokról, munkakultúráról és karrierlehetőségekről</li>
-						<li>Állásinterjúkról </li>
+						<li>Állásinterjúkról cégspecifikus próbainterjúkkal</li>
+						<li>Szakmai kapcsolatépítésről </li>
 					</ol>
 					<h2 class="w3-wide danger-red w3-center"></h2>
 				</div>
 
 				<div class="w3-half w3-panel">
-					<h2 class="w3-padding">Karriertanácsadás</h2>
+					<h2 class="w3-padding">Carrier path</h2>
 					<h3>Kinek ajánlom? NEKED</h3>
 					<ul class="" style="font-size: 120%">
 						<li>ha már egy ideje a szoftverfejlesztés világában tevékenykedsz, de nem látod, hogyan és hová tudnál előrelépni</li>
 						<li>ha érzed, hogy változásra van szükséged, de nem tudod, mi legyen a következő lépés a karrieredben</li>
-						<li>ha már tudod, melyik pozíciót akarod megpályázni, de nem tudod, mi kell hozzá</li>
+						<li>ha már tudod, melyik pozíciót akarod megpályázni, de nem tudod, mi kell hozzá, hogy meg is kapd</li>
 						<li>ha váltani akarsz, de nem tudod, melyik cég lenne számodra a megfelelő</li>
-						<li>ha munkád mellett kipróbálnád magadat egy PET / startup projectben, de nem tudod, hogyan keress magadnak projectet, vagy a projecthez társakat</li>
+						<li>ha kipróbálnád magadat egy PET / startup projectben, de nem tudod, hogyan keress projectet és társa(ka)t</li>
 					</ul>
 					<h3>Miről beszélünk a karriertanácsadás során?</h3>
-					<ol class="w3-ul " style="font-size: 120%">
+					<ol class="" style="font-size: 120%">
 						<li>Egyénre szabott karrierlehetőségekről</li>
 						<li>Munkahelyi pozíciókról: teamlead, vezetői és felsővezetői pozíciókról</li>
 						<li>Az önállósodás lehetőségeiről</li>
 						<li>Cégválasztásról</li>
+						<li>Szakmai kapcsolatokról minőségi szempontból: kapcsolatok fenntartásáról, elkerüléséről, konfliktusok kezelése</li>
 					</ol>
 				</div>
 			</div>
 		</section>
 		<section class="w3-section">
-			<h1 class="w3-padding">#MENTORÁLÁS</h1>
+			<h1 class="w3-padding">mentoring</h1>
 			<div class="w3-panel">
 				<div>
 					<h2 class="w3-padding">Mire jó a mentoring?</h2>
 					<p class="w3-padding" style="font-size: 120%">Számomra a mentor-mentorált kapcsolat elsősorban a tanulásról szól; hosszútávú együttműködés egy hosszútávú cél eléréséhez, amely során a hangsúlyt a mentorált személyes növekedésére, soft skillek és transferable skillek elsajátítására és a tapasztalatcserére helyezzük.</p>
 				</div>
 				<div>
-					<h2 class="w3-padding">Mikor érdemes a mentoringot választanod?</h2>
+					<h2 class="w3-padding">Mikor válaszd a mentoringot?</h2>
 					<h3 class="w3-padding">Ha már felvetődtek benned ezek vagy ehhez hasonló kérdések:</h3>
 					<ul class="" style="font-size: 120%">
-						<li>Hogyan válok képessé X-re? </li>
 						<li>Elég jó vagyok? Nekem való ez a szakma? (kiégés, elbizonytalanodás, imposztor szindróma)</li>
 						<li>Elég jó vagyok az X pozícióhoz?</li>
 						<li>Hogyan legyek csapatjátékos?</li>
-						<li>Elég jó vagyok egy vezetői / felsővezetői pozícióhoz?</li>
 						<li>Hogyan lehetek jó vagy jobb a jelenlegi pozíciómban?</li>
+						<li>Elég jó vagyok egy vezetői / felsővezetői pozícióhoz?</li>
 					</ul>
 				</div>
 			</div>
 		</section>
 		<section class="w3-section">
-			<h1 class="w3-padding">#OKTATÁS</h1>
+			<h1 class="w3-padding">up-skilling</h1>
 			<div class="w3-panel">
-				<h2 class="w3-padding">Kinek ajánlom? NEKED</h2>
-				<div class="">
-					<ul class="" style="font-size: 120%">
-						<li>ha már tudod, milyen szaktudást vagy hard skillt akarsz elsajátítani</li>
-						<li>ha már olyan alaptudással rendelkezel, amelyre építhetünk</li>
-					</ul>
-				</div>
 				<ul class="cloud">
 					<li class="w3-text-teal">Kanban</li>
 					<li class="w3-text-green w3-large">People Management</li>
 					<li class="w3-xlarge">Design Patterns</li>
-					<li class="w3-text-indigo">Java</li>
+					<li class="text-midnight-blue">Java</li>
 					<li class="w3-text-teal">Bugtracker</li>
 					<li class="">Debugging</li>
 					<li class="w3-text-teal">Docker</li>
-					<li class="w3-text-indigo">SQL</li>
-					<li class="w3-text-indigo w3-xxlarge">C++</li>
+					<li class="text-midnight-blue">SQL</li>
+					<li class="text-midnight-blue w3-xxlarge">C++</li>
 					<li class="w3-xlarge">OOP</li>
 					<li class="w3-text-teal">Scrum</li>
 					<li class="w3-xlarge">Software Design</li>
@@ -219,16 +226,26 @@
 					<li class="">Object Oriented Design</li>
 					<li class="w3-text-teal">Subversion</li>
 					<li class="w3-text-teal">Git</li>
-					<li class="w3-text-indigo w3-xlarge">JavaScript</li>
+					<li class="text-midnight-blue w3-xlarge">JavaScript</li>
 					<li class="w3-text-green">Online</li>
 					<li class="w3-text-teal">MongoDB</li>
 					<li class="w3-large">Boost</li>
 					<li class="w3-text-blue">Multithreading</li>
 				</ul>
+				<div>
+					<h2 class="w3-padding">Hogyan zajlanak az órák?</h2>
+					<ol class="w3-ul" style="font-size: 120%">
+						<li>Képességfelmérés</li>
+						<li>Elmélet az adott témához, knowledge sharing, know-how </li>
+						<li>Gyakorlat (egyéni projectek, pair programming stb.)</li>
+						<li>Otthoni gyakorlat supporttal</li>
+						<li>Csoportos oktatás</li>
+					</ol>
+				</div>
 			</div>
 		</section>
 		<section class="w3-section" style="font-size: 120%">
-			<h1 class="w3-padding">#CONSULTING</h1>
+			<h1 class="w3-padding">Consulting</h1>
 			<div class="w3-panel">
 				<ul>
 					<li>Technikai rész</li>
@@ -248,14 +265,14 @@
 		<section class="w3-section w3-center">
 			<ul class="cloud">
 				<li class="w3-text-teal">Kanban</li>
-				<li class="w3-text-indigo w3-xxlarge">Programming</li>
+				<li class="text-midnight-blue w3-xxlarge">Programming</li>
 				<li class="">Juniors</li>
 				<li class="w3-text-green w3-large">People Management</li>
 				<li class="w3-xlarge">Design Patterns</li>
 				<li class="w3-large">Generalists</li>
 				<li class="w3-text-green w3-xlarge">Coach</li>
 				<li class="w3-xlarge">Seniors</li>
-				<li class="w3-text-indigo">Java</li>
+				<li class="text-midnight-blue">Java</li>
 				<li class="w3-text-blue w3-large">Software Development</li>
 				<li class="w3-text-teal">Bugtracker</li>
 				<li class="w3-text-green">Face to face</li>
@@ -263,9 +280,9 @@
 				<li class="w3-text-green w3-xlarge">Interview preparation</li>
 				<li class="w3-text-teal">Docker</li>
 				<li class="w3-text-green">Leadership</li>
-				<li class="w3-text-indigo">SQL</li>
+				<li class="text-midnight-blue">SQL</li>
 				<li class="w3-text-green">Management</li>
-				<li class="w3-text-indigo w3-xxlarge">C++</li>
+				<li class="text-midnight-blue w3-xxlarge">C++</li>
 				<li class="">Software Quality Assurance</li>
 				<li class="w3-text-green">Support</li>
 				<li class="w3-xlarge">OOP</li>
@@ -277,7 +294,7 @@
 				<li class="">Object Oriented Design</li>
 				<li class="w3-text-teal">Subversion</li>
 				<li class="w3-text-teal">Git</li>
-				<li class="w3-text-indigo w3-xlarge">JavaScript</li>
+				<li class="text-midnight-blue w3-xlarge">JavaScript</li>
 				<li class="w3-text-green">Online</li>
 				<li class="w3-text-teal">MongoDB</li>
 				<li class="w3-large">Boost</li>
@@ -285,7 +302,7 @@
 			</ul>
 		</section>
 	</main>
-	<footer>
+	<footer class="w3-section">
 		<address class="w3-center w3-padding-16">
 			<span class="w3-cell-middle">&#8226; </span><i class="material-icons w3-cell-middle w3-hide-medium">my_location</i> <a class="w3-cell-middle" href=https://goo.gl/maps/CMG4dSjUjnswaSaz9>Inner City, Budapest, Hungary</a><span class="w3-hide-medium w3-hide-large w3-cell-middle"> &#8226;<br><br></span>
 			<span class="w3-cell-middle">&#8226; </span><i class="material-icons w3-cell-middle w3-hide-medium">email</i> <a class="w3-cell-middle" href=mailto:arvabalazs@gmail.com>arvabalazs@gmail.com</a><span class="w3-hide-medium w3-hide-large w3-cell-middle"> &#8226;<br><br></span>
