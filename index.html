@@ -30,7 +30,8 @@
 
 	<style>
 		:root {
-			--midnight-blue: #1E1F26;
+			--raw-midnight-blue: 30, 31, 38;
+			--midnight-blue: rgb(var(--raw-midnight-blue));
 			--indigo-ink: #283655;
 			--blueberry: #4D648D;
 			--periwinkle: #D0E1F9;
@@ -41,16 +42,29 @@
 			color: var(--midnight-blue);
 		}
 
+		.text-indigo-ink {
+			color: var(--indigo-ink);
+		}
+
+		.text-blueberry {
+			color: var(--blueberry);
+		}
+
+		.text-periwinkle {
+			color: var(--periwinkle);
+		}
+
 		body {
 			/* color:white; */
 			font-family: 'Crete Round', serif;
 			color: black;
-			background-color: #eeeeee;
+			background-color: var(--white-smoke);
 			background-repeat: no-repeat;
 			background-position: center center;
 			background-attachment: fixed;
 			background-size: cover;
 			background-image: url('bg.jpg');
+			padding-top: 30px;
 		}
 
 		section,
@@ -59,11 +73,11 @@
 			box-shadow: 0 10px 100px 0px rgba(0, 0, 0, 0.25);
 			margin-top: 16px !important;
 			border-top: 20px solid var(--indigo-ink);
+			padding-top: 15px;
 		}
 
 		section {
 			position: relative;
-			padding-top: 15px;
 			margin-bottom: 250px !important;
 		}
 
@@ -100,14 +114,8 @@
 			text-transform: uppercase;
 			margin-bottom: 0;
 			margin-top: -1.25em;
+			padding: 8px 16px !important
 		}
-
-		/* h2 {
-			background-color: var(--indigo-ink);
-			font-weight: bold;
-			color: white;
-			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-		} */
 
 		h3 {
 			font-weight: bold;
@@ -116,8 +124,6 @@
 		h2 {
 			margin: 0.5em 0 0 0 !important;
 			line-height: 1em;
-			background: none;
-			box-shadow: none;
 			color: var(--indigo-ink);
 			border-bottom: 1px solid var(--indigo-ink);
 			display: inline-block;
@@ -167,6 +173,20 @@
 		.cloud li:last-child {
 			vertical-align: top;
 		}
+
+		.paper {
+			border: 0;
+			display: inline-block;
+			padding: 30px !important;
+			font-size: 1.5em;
+			background: var(--periwinkle);
+			box-shadow:
+				0 1px 1px rgba(var(--raw-midnight-blue), 0.15),
+				0 10px 0 -5px var(--periwinkle),
+				0 10px 1px -4px rgba(var(--raw-midnight-blue), 0.15),
+				0 20px 0 -10px var(--periwinkle),
+				0 20px 1px -9px rgba(var(--raw-midnight-blue), 0.15);
+		}
 	</style>
 	<!-- <meta property="og:image" content="http://ia.media-imdb.com/images/rock.jpg" /> -->
 	<!-- <meta property="fb:admins" content="USER_ID"/> -->
@@ -175,12 +195,12 @@
 <body class="">
 	<header class="w3-center">
 		<section>
-			<h1 class="w3-padding">Introduction</h1>
+			<h1>Introduction</h1>
 			<div class="w3-row w3-panel">
 				<h2 class="w3-padding">Üdvözöllek!</h2>
 				<div class="w3-half w3-panel">
 					<img width="256px" height="256px" alt="Profile picture" class="w3-circle" style="margin-bottom: 10px; border: 5px solid var(--periwinkle);" src="profile.jpg" />
-					<div class="w3-center w3-padding" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);font-size: 120%;font-weight:bold; color:black; background-color: var(--periwinkle)">
+					<div class="w3-center w3-padding paper">
 						&#8226; Software Development Expert &#8226;<br>
 						&#8226; Passionate Leader &#8226;<br>
 						&#8226; Extravagant Technologist &#8226;<br>
@@ -203,7 +223,7 @@
 				</div>
 				<div class="w3-half w3-panel">
 					<h2 class="w3-padding" style="margin-bottom:0;">Miért válassz engem?</h2>
-					<h2 class="w3-padding" style="margin-top:0;background-color: var(--periwinkle); color: black;">&#8226; Insight &#8226;<br>&#8226; Involvement &#8226;<br>&#8226; Improvement &#8226;</h2>
+					<div class="w3-padding w3-margin paper">&#8226; Insight &#8226;<br>&#8226; Involvement &#8226;<br>&#8226; Improvement &#8226;</div>
 					<div class="w3-margin">
 						<p>12 éve dolgozok a szoftverfejlesztés világában. Az egyetemi évek alatt start-upoknál dolgoztam (rendszerfejlesztőként) beágyazott szoftver fejlesztőként és a webfejlesztés területén komplex alkalmazások megvalósításán. Majd elhelyezkedtem az NNG-nél, ahol jelenleg Lead Engineerként dolgozom.</p>
 						<p>Line managerként 100 front-end és C++ fejlesztő, tech writer-ek és requirement engineer munkáját hangolnom össze, elősegítem a személyes fejlődésüket, támogatom/előmozdítom a karrierjüket, megtervezem a projectek kiosztását és biztosítom az elvégzésükhöz szükséges feltételeket.</p>
@@ -215,12 +235,14 @@
 	</header>
 	<main>
 		<section>
-			<h1 class="w3-padding">hands-on counselling</h1>
+			<h1>hands-on counselling</h1>
 			<div class="w3-row">
 				<div class="w3-half w3-panel">
 					<div class="w3-center">
-						<h2 class="w3-padding" style="margin-bottom:0">Guidance</h2>
-						<h2 class="w3-padding" style="margin-top:0;background-color: var(--periwinkle); color: black;">1 ingyenes alkalom</h2>
+						<div>
+							<h2 class="w3-padding" style="margin-bottom:0">Guidance</h2>
+						</div>
+						<div class="w3-padding w3-margin paper">1 ingyenes alkalom</div>
 					</div>
 					<div class="w3-margin">
 						<h3>Kinek ajánlom? NEKED</h3>
@@ -269,7 +291,7 @@
 			</div>
 		</section>
 		<section>
-			<h1 class="w3-padding">mentoring</h1>
+			<h1>mentoring</h1>
 			<div class="w3-panel">
 				<div>
 					<div class="w3-center">
@@ -295,31 +317,31 @@
 			</div>
 		</section>
 		<section>
-			<h1 class="w3-padding">up-skilling</h1>
+			<h1>up-skilling</h1>
 			<div class="w3-panel">
-				<ul class="cloud">
-					<li class="w3-text-teal">Kanban</li>
-					<li class="w3-text-green w3-large">People Management</li>
+				<ul class="cloud" style="font-size:200%">
+					<li class="text-blueberry">Kanban</li>
+					<li class="text-indigo-ink w3-large">People Management</li>
 					<li class="w3-xlarge">Design Patterns</li>
 					<li class="text-midnight-blue">Java</li>
-					<li class="w3-text-teal">Bugtracker</li>
+					<li class="text-blueberry">Bugtracker</li>
 					<li>Debugging</li>
-					<li class="w3-text-teal">Docker</li>
+					<li class="text-blueberry">Docker</li>
 					<li class="w3-xlarge">Architectural Design</li>
 					<li class="text-midnight-blue">SQL</li>
 					<li class="text-midnight-blue w3-xxlarge">C++</li>
 					<li class="w3-xlarge">OOP</li>
-					<li class="w3-text-teal">Scrum</li>
+					<li class="text-blueberry">Scrum</li>
 					<li class="w3-xlarge">Software Design</li>
-					<li class="w3-text-blue w3-large">Test Driven Development</li>
+					<li class="text-midnight-blue w3-large">Test Driven Development</li>
 					<li class="w3-large">STL</li>
+					<li class="text-blueberry">Git</li>
 					<li>Object Oriented Design</li>
-					<li class="w3-text-teal">Subversion</li>
-					<li class="w3-text-teal">Git</li>
+					<li class="text-blueberry">Subversion</li>
 					<li class="text-midnight-blue w3-xlarge">JavaScript</li>
-					<li class="w3-text-teal">MongoDB</li>
+					<li class="text-blueberry">MongoDB</li>
 					<li class="w3-large">Boost</li>
-					<li class="w3-text-blue">Multithreading</li>
+					<li class="text-midnight-blue">Multithreading</li>
 					<li>RDBMS</li>
 					<li class="w3-xlarge">Node.js</li>
 					<li class="w3-text-green w3-large">OOP</li>
@@ -342,7 +364,7 @@
 			</div>
 		</section>
 		<section>
-			<h1 class="w3-padding">Consulting</h1>
+			<h1>Consulting</h1>
 			<div class="w3-panel">
 				<ul>
 					<li>Technikai rész</li>
@@ -359,47 +381,9 @@
 				</ul>
 			</div>
 		</section>
-		<!-- <section class=" w3-center">
-			<ul class="cloud">
-				<li class="w3-text-teal">Kanban</li>
-				<li class="text-midnight-blue w3-xxlarge">Programming</li>
-				<li>Juniors</li>
-				<li class="w3-text-green w3-large">People Management</li>
-				<li class="w3-xlarge">Design Patterns</li>
-				<li class="w3-large">Generalists</li>
-				<li class="w3-text-green w3-xlarge">Coach</li>
-				<li class="w3-xlarge">Seniors</li>
-				<li class="text-midnight-blue">Java</li>
-				<li class="w3-text-blue w3-large">Software Development</li>
-				<li class="w3-text-teal">Bugtracker</li>
-				<li class="w3-text-green">Face to face</li>
-				<li>Debugging</li>
-				<li class="w3-text-green w3-xlarge">Interview preparation</li>
-				<li class="w3-text-teal">Docker</li>
-				<li class="w3-text-green">Leadership</li>
-				<li class="text-midnight-blue">SQL</li>
-				<li class="w3-text-green">Management</li>
-				<li class="text-midnight-blue w3-xxlarge">C++</li>
-				<li>Software Quality Assurance</li>
-				<li class="w3-text-green">Support</li>
-				<li class="w3-xlarge">OOP</li>
-				<li class="w3-text-teal">Scrum</li>
-				<li class="w3-xlarge">Software Design</li>
-				<li class="w3-text-blue w3-large">Test Driven Development</li>
-				<li class="w3-text-green">Teaching</li>
-				<li class="w3-large">STL</li>
-				<li>Object Oriented Design</li>
-				<li class="w3-text-teal">Subversion</li>
-				<li class="w3-text-teal">Git</li>
-				<li class="text-midnight-blue w3-xlarge">JavaScript</li>
-				<li class="w3-text-green">Online</li>
-				<li class="w3-text-teal">MongoDB</li>
-				<li class="w3-large">Boost</li>
-				<li class="w3-text-blue">Multithreading</li>
-			</ul>
-		</section> -->
 	</main>
 	<footer>
+		<h1>contact</h1>
 		<address class="w3-center w3-padding-16">
 			<span class="w3-cell-middle">&#8226; </span><i class="material-icons w3-cell-middle w3-hide-medium">my_location</i> <a class="w3-cell-middle" href=https://goo.gl/maps/CMG4dSjUjnswaSaz9>Inner City, Budapest, Hungary</a><span class="w3-hide-medium w3-hide-large w3-cell-middle"> &#8226;<br><br></span>
 			<span class="w3-cell-middle">&#8226; </span><i class="material-icons w3-cell-middle w3-hide-medium">email</i> <a class="w3-cell-middle" href=mailto:arvabalazs@gmail.com>arvabalazs@gmail.com</a><span class="w3-hide-medium w3-hide-large w3-cell-middle"> &#8226;<br><br></span>
