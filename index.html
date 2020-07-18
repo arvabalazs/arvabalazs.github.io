@@ -30,6 +30,12 @@
 
 	<style>
 		:root {
+			--red-900: rgb(183, 28, 28);
+			--pink-900: rgb(136, 14, 79);
+			--puprle-900: rgb(74,20,140);
+			--orange-900: rgb(230, 81, 0);
+			--cyan-900: rgb(0, 96, 100);
+			--light-green-900: rgb(51, 105, 30);
 			--raw-midnight-blue: 30, 31, 38;
 			--midnight-blue: rgb(var(--raw-midnight-blue));
 			--indigo-ink: #283655;
@@ -55,7 +61,6 @@
 		}
 
 		body {
-			/* color:white; */
 			font-family: 'Crete Round', serif;
 			color: black;
 			background-color: var(--white-smoke);
@@ -141,36 +146,40 @@
 
 		.cloud {
 			padding: 0;
-			margin-top: 0;
-			margin-left: 1em;
-			margin-right: 1em;
+			margin-top: 30px;
 			text-align: center;
+			line-height: 1em;
 		}
 
-		.cloud li {
-			list-style: none;
-			display: inline;
-			line-height: 100%;
+		.cloud::first-line {
+			word-spacing: 0em;
+		}
+
+		.cloud span {
 			vertical-align: middle;
 		}
 
-		.cloud li:nth-of-type(3n + 1) {
+		.cloud span:nth-of-type(3n + 1) {
 			vertical-align: text-top;
 		}
 
-		.cloud li:nth-of-type(4n + 3) {
+		.cloud span:nth-of-type(4n + 3) {
 			vertical-align: middle;
 		}
 
-		.cloud li:nth-of-type(5n - 3) {
+		.cloud span:nth-of-type(5n - 3) {
 			vertical-align: text-bottom;
 		}
 
-		.cloud li:first-child {
+		.cloud span:first-child {
 			vertical-align: bottom;
 		}
 
-		.cloud li:last-child {
+		.cloud span:nth-child(5) {
+			vertical-align: bottom;
+		}
+
+		.cloud span:last-child {
 			vertical-align: top;
 		}
 
@@ -186,6 +195,45 @@
 				0 10px 1px -4px rgba(var(--raw-midnight-blue), 0.15),
 				0 20px 0 -10px var(--periwinkle),
 				0 20px 1px -9px rgba(var(--raw-midnight-blue), 0.15);
+		}
+
+		.cloud-wrapper {
+			width: 90%;
+			position: relative;
+			margin: auto;
+		}
+
+		.cloud-text {
+			height: 100%;
+			width: 100%;
+			position: relative;
+			margin: 0;
+		}
+
+		.cloud-text p {
+			height: 100%;
+		}
+
+		.cloud-text::before {
+			content: "";
+			float: left;
+			height: 100%;
+			width: 50%;
+			shape-outside: polygon(0 0, 25% 20%, 0 35%, 25% 45%, 0 60%, 10% 65%, 0 75%);
+		}
+
+		.cloud-text p::before {
+			content: "";
+			width: 50%;
+			height: 100%;
+			float: right;
+			shape-outside: polygon(100% 0, 75% 20%, 100% 35%, 75% 45%, 100% 60%, 90% 65%, 100% 75%);
+		}
+
+		@media (min-width: 950px) {
+			.cloud-wrapper {
+				height: 300px;
+			}
 		}
 	</style>
 	<!-- <meta property="og:image" content="http://ia.media-imdb.com/images/rock.jpg" /> -->
@@ -319,36 +367,40 @@
 		<section>
 			<h1>up-skilling</h1>
 			<div class="w3-panel">
-				<ul class="cloud" style="font-size:200%">
-					<li class="text-blueberry">Kanban</li>
-					<li style="color: teal" class="w3-large">People Management</li>
-					<li style="color: green" class="w3-xlarge">Design Patterns</li>
-					<li class="text-midnight-blue">Java</li>
-					<li class="text-blueberry">Bugtracker</li>
-					<li>Debugging</li>
-					<li style="color: teal" class="w3-xlarge">Architectural Design</li>
-					<li class="text-blueberry">Docker</li>
-					<li class="text-midnight-blue">SQL</li>
-					<li style="color: green" class="w3-xxlarge">C++</li>
-					<li style="color: crimson" class="w3-xlarge">OOP</li>
-					<li class="text-blueberry">Scrum</li>
-					<li style="color: crimson" class="w3-xlarge">Software Design</li>
-					<li style="color: teal" class="w3-large">Test Driven Development</li>
-					<li style="color: crimson" class="w3-large">STL</li>
-					<li class="text-blueberry">Git</li>
-					<li style="color: lightsalmon">Object Oriented Design</li>
-					<li class="text-blueberry">Subversion</li>
-					<li class="text-midnight-blue w3-xlarge">JavaScript</li>
-					<li class="text-blueberry">MongoDB</li>
-					<li style="color: lightsalmon" class="w3-large">Boost</li>
-					<li>RDBMS</li>
-					<li style="color: green">Kotlin</li>
-					<li class="w3-xlarge">Node.js</li>
-					<li style="color: green" class="w3-large">OOP</li>
-					<li style="color: teal" class="w3-xlarge">TTD</li>
-					<li style="color: lightsalmon">Android</li>
-					<li class="text-midnight-blue">Multithreading</li>
-				</ul>
+				<div class="cloud-wrapper">
+					<div class="cloud-text">
+						<p class="cloud" style="font-size:200%">
+							<span class="text-blueberry">Kanban</span>
+							<span style="color: var(--cyan-900)" class="w3-large">People Management</span>
+							<span style="color: var(--light-green-900)" class="w3-xlarge">Design Patterns</span>
+							<span style="color: var(--midnight-blue)">Java</span>
+							<span class="text-blueberry">Bugtracker</span>
+							<span style="color: var(--midnight-blue)">Debugging</span>
+							<span style="color: var(--cyan-900)" class="w3-xlarge">Architectural Design</span>
+							<span class="text-blueberry">Docker</span>
+							<span style="color: var(--midnight-blue)">SQL</span>
+							<span style="color: var(--light-green-900)" class="w3-xxlarge">C++</span>
+							<span style="color: var(--red-900)" class="w3-xlarge">OOP</span>
+							<span class="text-blueberry">Scrum</span>
+							<span style="color: var(--red-900)" class="w3-xlarge">Software Design</span>
+							<span style="color: var(--cyan-900)" class="w3-large">Test Driven Development</span>
+							<span style="color: var(--red-900)" class="w3-large">STL</span>
+							<span class="text-blueberry">Git</span>
+							<span style="color: var(--orange-900)">Object Oriented Design</span>
+							<span class="text-blueberry">Subversion</span>
+							<span style="color: var(--midnight-blue)" class="w3-xlarge">JavaScript</span>
+							<span class="text-blueberry">MongoDB</span>
+							<span style="color: var(--orange-900)" class="w3-large">Boost</span>
+							<span style="color: var(--midnight-blue)">RDBMS</span>
+							<span style="color: var(--light-green-900)">Kotlin</span>
+							<span style="color: var(--midnight-blue)" class="w3-xlarge">Node.js</span>
+							<span style="color: var(--light-green-900)" class="w3-large">OOP</span>
+							<span style="color: var(--cyan-900)" class="w3-xlarge">TTD</span>
+							<span style="color: var(--orange-900)">Android</span>
+							<span style="color: var(--midnight-blue)">Multithreading</span>
+						</p>
+					</div>
+				</div>
 				<div>
 					<div class="w3-center">
 						<h2 class="w3-padding">Hogyan zajlanak az órák?</h2>
